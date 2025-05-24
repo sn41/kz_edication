@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Список специальностей</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<h1>Список специальностей</h1>
+<div>
+  <label>Регион: <input type="text" id="region" placeholder="Введите регион"></label>
+  <label>Город: <input type="text" id="city" placeholder="Введите город"></label>
+  <label>Учебное заведение: <input type="text" id="institute" placeholder="Введите учреждение"></label>
+  <label>Специальность: <input type="text" id="speciality" placeholder="Введите специальность"></label>
+  <label>Тип:
+    <select id="type">
+      <option value="college">college</option>
+      <option value="university">university</option>
+    </select>
+  </label>
+  <label>База:
+    <select id="base">
+      <option value="9 класс">9 класс</option>
+      <option value="11 класс">11 класс</option>
+      <option value="ТИПО">ТИПО</option>
+    </select>
+  </label>
+  <button onclick="searchSpecialities()">Поиск</button>
+</div>
+
+<div id="result" class="result"></div>
+<div id="error" class="error"></div>
+
+<!--<script src="js/specialities.js"></script>-->
+<script src="js/specialities.js"></script>
+</body>
+</html>

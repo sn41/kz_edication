@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Детали учебного заведения</title>
+
+    <script src="js/institute-details.js" defer></script>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="controls-row">
+
+    <label>Специальность: <input type="text" id="speciality" placeholder="Введите специальность"></label>
+
+    <!--    utils.js создаёт выпадающее меню "База обучения"-->
+    <div id="base" class="base"></div>
+
+    <!--    Кнопка запускающая поиск-->
+    <button onclick="searchSpecialitiesByInstitute()">Поиск</button>
+</div>
+
+
+<div id="details" class="details"></div>
+
+<h3>Список специальностей:</h3>
+<ul id="result"></ul>
+
+<div id="error" class="error"></div>
+
+<!--Скрипт для создания выпадающих меню-->
+<script>
+    function createMenu(labelText, id, options) {
+        let html = `<label>${labelText}: <select id="${id}">`;
+        options.forEach(optionValue => {
+            html += `<option value="${optionValue}">${optionValue}</option>`;
+        });
+        html += `</select></label>`;
+        return html;
+    }
+
+    document.getElementById('base').innerHTML = createMenu("База", "base-menu", ["9 класс", "11 класс", "ТИПО"]);
+</script>
+
+</body>
+</html>

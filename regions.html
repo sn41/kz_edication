@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Список регионов</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<h1>Список регионов</h1>
+
+<!--Элементы фильтра данных списка-->
+<div class="controls-row">
+    <!--    Строка поиска-->
+    <label>Регион: <input type="text" id="region" placeholder="Введите название"></label>
+
+    <!--    utils.js создаёт выпадающее меню "Тип обучения"-->
+    <div id="type" class="type"></div>
+
+    <!--    utils.js создаёт выпадающее меню "База обучения"-->
+    <div id="base" class="base"></div>
+
+    <!--    Кнопка запускающая поиск-->
+    <button onclick="searchRegions()">Поиск</button>
+
+</div>
+
+<!--    Элемент для которого regions.js создаст список, либо сообщение-->
+<div id="result" class="result"></div>
+
+<!--    Элемент для вывода regions.js сообщения об ошибках-->
+<div id="error" class="error"></div>
+
+
+<!--Скрипт для создания выпадающих меню-->
+<script src="js/utils.js"></script>
+
+<!--Скрипт для обращения к серверу для получения результата поиска в базе данных-->
+<script src="js/regions.js"></script>
+
+</body>
+</html>

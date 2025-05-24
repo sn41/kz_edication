@@ -1,0 +1,42 @@
+/* css/style.css */
+
+.controls-row {
+    display: flex;
+    gap: 10px; /* Добавит небольшой промежуток между элементами */
+    align-items: center; /* Выровняет элементы по вертикали по центру */
+}
+
+.controls-row label {
+    margin-right: 10px; /* Добавит отступ справа от label, если нужно */
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
+
+h1, h2 {
+    color: #333;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    margin: 5px 0;
+}
+
+.error {
+    color: red;
+    margin-top: 10px;
+}
+
+.result {
+    margin-top: 20px;
+}
+
+img {
+    vertical-align: middle;
+}

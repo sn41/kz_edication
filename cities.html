@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Список городов</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<h1>Список городов</h1>
+
+<!--Элементы фильтра данных списка-->
+<div class="controls-row">
+    <!--    Строка поиска по региону-->
+    <!--  Не хотим использовать строку поиска по региону-->
+    <!--  <label>Регион: <input type="text" id="region" placeholder="Введите название региона"></label>-->
+
+    <!--    Строка поиска по городу-->
+    <label>Город: <input type="text" id="city" placeholder="Введите название"></label>
+
+    <!--    utils.js создаёт выпадающее меню "Тип обучения"-->
+    <div id="type" class="type"></div>
+
+    <!--    utils.js создаёт выпадающее меню "База обучения"-->
+    <div id="base" class="base"></div>
+
+    <!--    Кнопка запускающая поиск-->
+    <button onclick="searchCities()">Поиск</button>
+
+</div>
+
+<!--    Элемент для которого cities.js создаст список, либо сообщение-->
+<div id="result" class="result"></div>
+
+<!--    Элемент для вывода cities.js сообщения об ошибках-->
+<div id="error" class="error"></div>
+
+
+<!--Скрипт для создания выпадающих меню-->
+<script src="js/utils.js"></script>
+
+<!--Скрипт для обращения к серверу для получения результата поиска в базе данных-->
+<script src="js/cities.js"></script>
+
+
+</body>
+</html>
