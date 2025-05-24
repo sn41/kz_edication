@@ -29,7 +29,7 @@ const loadInstDetails = async () => {
             document.getElementById("error").innerText = `Ошибка: ${data.error}`;
         } else {
             const {name, code: instCode, type, region, city, website} = data.result;
-            const html = `
+            document.getElementById("details").innerHTML = `
         <h2>${name}</h2>
         <p><strong>Код:</strong> ${instCode}</p>
         <p><strong>Тип:</strong> ${type}</p>
@@ -37,7 +37,6 @@ const loadInstDetails = async () => {
         <p><strong>Город:</strong> ${city}</p>
         ${website ? `<p><strong>Веб-сайт:</strong> <a href="${website}" target="_blank">${website}</a></p>` : ""}
       `;
-            document.getElementById("details").innerHTML = html;
 
             localStorage.setItem(instituteType, type);
             localStorage.setItem(instituteName, name);

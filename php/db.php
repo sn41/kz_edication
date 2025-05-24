@@ -1,6 +1,7 @@
 <?php
 // includes/db.php - Создание подключения через PDO
 //global $dsn, $user, $pass, $options;
+global $dsn, $user, $pass, $options;
 require_once 'config.php';
 
 try {

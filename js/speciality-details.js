@@ -21,7 +21,7 @@ const loadSpecDetails = async () => {
             document.getElementById("error").innerText = `Ошибка: ${data.error}`;
         } else {
             const { name, code: specCode, tasks, competencies, tools } = data.result;
-            const html = `
+            document.getElementById("details").innerHTML = `
         <h2>${name}</h2>
         <p><strong>Код:</strong> ${specCode}</p>
         <div><strong>Задачи:</strong> ${tasks}</div>
@@ -29,7 +29,6 @@ const loadSpecDetails = async () => {
         <div><strong>Инструменты и технологии:</strong> ${tools}</div>
         <p><a href="institute-by-speciality.html?speciality=${encodeURIComponent(name)}">Список учреждений с этой специальностью</a></p>
       `;
-            document.getElementById("details").innerHTML = html;
         }
     } catch (err) {
         document.getElementById("error").innerText = `Ошибка: ${err}`;
