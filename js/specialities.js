@@ -38,3 +38,5 @@ const searchSpecialities = async () => {
         document.getElementById("error").innerText = `Ошибка: ${err}`;
     }
 };
+
+searchSpecialities()
